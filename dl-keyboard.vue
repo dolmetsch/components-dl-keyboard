@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from 'vue'
 
 export default defineComponent({
@@ -75,17 +75,17 @@ export default defineComponent({
     }
   },
   methods: {
-    onKeyDown (e: KeyboardEvent) {
+    onKeyDown (e) {
       if (e.key === 'Shift') {
         this.shiftOn = true
       }
     },
-    onKeyUp (e: KeyboardEvent) {
+    onKeyUp (e) {
       if (e.key === 'Shift') {
         this.shiftOn = false
       }
     },
-    onKeyPress (e: KeyboardEvent) {
+    onKeyPress (e) {
       if (Object.values(this.map).includes(e.key)) {
         this.pressedKey = e.key
         this.$emit('keyPressed', this.pressedKey)
@@ -100,7 +100,7 @@ export default defineComponent({
     resetPressedKey () {
       this.pressedKey = ''
     },
-    getShifted (b: string) {
+    getShifted (b) {
       if (b.match(/[a-z]/i)) {
         return b.toUpperCase()
       }
