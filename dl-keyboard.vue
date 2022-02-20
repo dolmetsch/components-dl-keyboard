@@ -19,9 +19,7 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
+export default {
   props: [
     'map',
     'highlightedKey',
@@ -144,7 +142,7 @@ export default defineComponent({
     window.removeEventListener('keypress', this.onKeyPress)
     window.addEventListener('keyup', this.onKeyUp)
   }
-})
+}
 </script>
 
 <style lang="stylus" scoped>
