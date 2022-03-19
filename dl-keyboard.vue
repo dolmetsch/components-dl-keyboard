@@ -10,7 +10,7 @@
           highlighted: map[b] && map[b] === highlightedKey,
           pressed: map[b] && pressedKey && map[b] === pressedKey || b === pressedKey,
         }"
-        @click="onKeyPress({key: map[b] || b})"
+        @click="onKeyPress({ key: map[b] })"
       >
         <span class="mapped-key" v-if="map[!shiftOn ? b : getShifted(b)]">{{ map[!shiftOn ? b : getShifted(b)] }}</span>
         <span class="en-key">{{ !shiftOn ? b : getShifted(b) }}</span>
