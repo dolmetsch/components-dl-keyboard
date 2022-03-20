@@ -180,7 +180,8 @@ export default {
       .mapped-key
         font-size 2em
         position relative
-        top -.5em
+        top -.25em
+        background transparent
       .mapped-key + .en-key
         position absolute
         bottom 0
